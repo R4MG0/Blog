@@ -1,14 +1,46 @@
 {
   "technologies": [
-    { "id": 1, "name": "reactjs"},
-    { "id": 2, "name": "nextjs"}
+    {
+      "id": 1,
+      "name": "reactjs"
+    },
+    {
+      "id": 2,
+      "name": "nextjs"
+    }
   ],
   "users": [
     {
-      "email": "admin@admin.ch",
-      "password": "$2a$10$YkFbz7nkfUtM64tKLMfPme2IOwuBEVCWXcGv75NP6BEdeV94eQ/TG",
-      "name": "Adam Admin",
-      "id": 1
+      "id": 1,
+      "email": "Marco@marco.ch",
+      "password": "$2a$10$LqZN.B5Q1TouzMBW9Exod.LTbYxu.GHB4Vcvmd/RUU9pW3nIOoET6",
+      "firstname": "Marco",
+      "lastname": "Herren"
+      
+    },
+    {
+      "id": 2,
+      "email": "Ivan@ivan.ch",
+      "password": "$2a$10$IT7coyTKcW6NVOsLQLvXj.xcvVyYQdH3S5vlAJPqjsNtF1jwNSlEO",
+      "firstname": "Ivan",
+      "lastname": "Cammarota"
+      
+    }
+  ],
+  "posts":[
+    {
+      "id": 1,
+      "title": "Hello",
+      "img":"https://wallpapers.com/wallpapers/4k-scalebound-dragon-5t0rvngkrmuc5b2w.html",
+      "description":"Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello ",
+      "user":"Marco"
+    },
+    {
+      "id": 2,
+      "title": "Lorem Ipsum",
+      "img":"https://wallpapers.com/wallpapers/animated-sitting-man-4k-d6cx6j664teglvkr.html",
+      "description":"Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum ",
+      "user":"Ivan"
     }
   ]
 }
