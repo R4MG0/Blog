@@ -3,6 +3,7 @@ import { useRouter } from "next/router"
 import { getPostById} from "@lib/api"
 import { deletePost } from "@lib/api"
 import {Button} from "react-bootstrap"
+import styles from "./index.module.css"
 
 export default function IdIndexPage({session}){
     
@@ -21,15 +22,16 @@ export default function IdIndexPage({session}){
     }, [id])
 
     async function kill(){
-        await deletePost(id, session.accessToken)
+        const resp = await deletePost(id, session.accessToken)
         router.push("/")
     }
 
     return post &&(
-        <div>
+        <div className={styles.singlePost}>
             <div key={post.id}>
-                <h1>{post.title}</h1>
-                <p>{post.text}</p>
+                <h1 className={styles.title}>{post.title}</h1>
+                <img className={styles.image} src={post.img}/>
+                <p className={styles.text}>{post.description}</p>
                 
                 { session.user && 
                 <div>

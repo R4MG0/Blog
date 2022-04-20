@@ -70,12 +70,13 @@ export default function loginPage({session}){
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>E-mail</Form.Label>
                     <Form.Control placeholder="Name@name.ch" type="email" name="email" onChange={handleChange} value={userData.username}/>
-                    {errors.email && <div>{errors.email}</div>}
+                    {errors.email && <div  style={{color: 'red'}}>{errors.email}</div>}
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
                     <Form.Control type="password" name="password" placeholder="Password" onChange={handleChange} value={userData.password}/>
+                    {errors.password && <div style={{color: 'red'}}>{errors.password}</div>}
                 </Form.Group>
                 <Button variant="primary" type="submit">
                     Log In
