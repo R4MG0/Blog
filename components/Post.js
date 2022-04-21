@@ -174,7 +174,12 @@ export default function Post({session, postToEdit}) {
                 </Form.Group>
                 <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail">
                 </Form.Group>
-                <Button variant="primary" type="submit">Save</Button>
+                <div>
+                    <Button variant="primary" type="submit">Save</Button>
+                    {/* <div className={styles.btn}> */}
+                        <Button className={styles.button} onClick={() => router.push('/')}>Back</Button>
+                    {/* </div> */}
+                </div>
             </Form>
         </div>
     )
