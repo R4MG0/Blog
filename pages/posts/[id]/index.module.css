@@ -25,3 +25,23 @@
     word-break: break-word;
 }
 
+.btn{
+    position: relative;
+}
+
+.btn button{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+
+.topRight{
+    position: relative;
+}
+/* 
+.topRight .tp{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+} */

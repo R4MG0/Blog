@@ -1,3 +1,4 @@
+import styles from "./Post.module.css"
 import { useEffect, useState, useRef } from "react"
 import {createPost, updatePost } from "@lib/api"
 import { useRouter } from "next/router"
@@ -16,14 +17,18 @@ const defaultModel = {
     title: "",
     img:"",
     description: "",
-    user: ""
+    user: "",
+    date: "",
+    comments: []
 }
 function validateModel(post) {
     const errors = {
         title: "",
         img:"",
         description: "",
-        user: ""
+        user: "",
+        date: "",
+        comments: ""
     }
     let isValid = true
 
@@ -37,8 +42,8 @@ function validateModel(post) {
         isValid = false;
     }
 
-    if(post.img === null) {
-        errors.img = "Please put a img"
+    if(post.img === null || post.img.length === 0) {
+        errors.img = "Please put an img"
         isValid = false;
     }
 
@@ -66,6 +71,11 @@ export default function Post({session, postToEdit}) {
     const fileInput = useRef(null)
 
 
+    const today = new Date();
+    const date = today.getFullYear()+'.'+(today.getMonth()+1)+'.'+today.getDate();
+    // var time = today.getHours() + ":" + today.getMinutes()
+    // var dateTime = date+' '+time;
+
     useEffect(() => {
         if (postToEdit) {
             setPost(postToEdit)
@@ -74,8 +84,6 @@ export default function Post({session, postToEdit}) {
 
     useEffect(() => {
         if(!base64Image) return
-
-        alert(post)
 
         const uploadImage = async () => {
             const response = await fetch("/api/upload", {
@@ -121,17 +129,17 @@ export default function Post({session, postToEdit}) {
 
         post.img = imagePath
         post.user = session.user.firstName 
+        post.date = date
+        
         const result = validateModel(post)
 
         if(!result.isValid) {
-            alert("123123412341341321")
             setErrors(result.errors)
             setIsLoading(false)
             return
         }
 
         if(post.id){
-            alert("aorsitnaorisetnaosiretnaorsietnaorsietnaoirsent")
             await updatePost(post, session.accessToken)
             setPost(post)
             router.push(`/posts/${post.id}`)
@@ -145,17 +153,18 @@ export default function Post({session, postToEdit}) {
     return(
         <div>
             <Form onSubmit={handleSubmit}>
-                {postToEdit ? <h1>Update Post</h1> : <h1>Create Post</h1>}
+                {postToEdit ? <h1>Edit Post</h1> : <h1>Create Post</h1>}
                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                     <Form.Label>Title</Form.Label>
                     <Form.Control  placeholder="Title" name="title" defaultValue={post.title} onChange={handleChange}/>
-                    {errors.title && <div>{errors.title}</div>}
+                    {errors.title && <div style={{color:'red'}}>{errors.title}</div>}
                 </Form.Group>
                 
                 <Form.Group controlId="formFileMultiple" className="mb-3">
                     <Form.Label >Pictures</Form.Label>
                     {postToEdit && <img src={postToEdit.img} style={{width: '100%'}}/>}
-                    <Form.Control type="file" defaultValue={post.img} onChange={onFileInputChange} name="img" multiple />
+                    <Form.Control type="file" defaultValue={post.img} onChange={onFileInputChange} name="img"/>
+                    {errors.img && <div style={{color:'red'}}>{errors.img}</div>}
                 </Form.Group>
 
 
@@ -164,12 +173,6 @@ export default function Post({session, postToEdit}) {
                     <Form.Control as="textarea" rows={3} name="description" defaultValue={post.description} onChange={handleChange} />
                 </Form.Group>
                 <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail">
-                    <Form.Label column sm="2">
-                    First Name
-                    </Form.Label>
-                    <Col sm="10">
-                    <Form.Control plaintext readOnly  defaultValue={session.user?.firstName} name="user" />
-                    </Col>
                 </Form.Group>
                 <Button variant="primary" type="submit">Save</Button>
             </Form>

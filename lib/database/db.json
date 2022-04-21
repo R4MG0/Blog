@@ -16,29 +16,135 @@
       "firstName": "Marco",
       "lastName": "Herren",
       "id": 1
+    },
+    {
+      "email": "Rebekka.Herren@iff.ch",
+      "password": "$2a$10$ubaOrmeroWHN3X2V7pezt.Bw9ObJLRFaShN2yglob7RYGmZuLG2rC",
+      "firstName": "Rebekka",
+      "lastName": "Herren",
+      "id": 2
+    },
+    {
+      "email": "Marco@marco.ch",
+      "password": "$2a$10$vwnF1TahJlQvJdSvsLnqteRNxi3VxoOjpTW1pDjeY2Sf9HUo.9E.u",
+      "id": 3
+    },
+    {
+      "email": "Sophia.Baggio@iff.ch",
+      "password": "$2a$10$Enqez6sSsmrnSRdkWh9H1OvO1d1ynXXZVKy3.lpIOQ7NfzlrAn08K",
+      "firstName": "Sophia",
+      "lastName": "Baggio",
+      "id": 4
+    },
+    {
+      "email": "Victoria.Baggio@iff.ch",
+      "password": "$2a$10$knoHdTK9USHt9IzrXX5TQuWjSoqZ0YkH9heGnURtDQO5zyCV.eK5y",
+      "firstName": "Victoria",
+      "lastName": "Baggio",
+      "id": 5
+    },
+    {
+      "email": "Neo.Djikstra@iff.ch",
+      "password": "$2a$10$7WXUfe3kV/5odxu7m7EymO3T7zrpcTlZbWAdUO0r9UgAxG3Et.yK2",
+      "firstName": "Neo",
+      "lastName": "Djikstra",
+      "id": 6
+    },
+    {
+      "email": "Isabelle.Baggio@iff.ch",
+      "password": "$2a$10$9.WgRjXGBlOZNdqIqEUc5eZO2IAsA/CgeMgsj9DGdprQ4LteDCKOa",
+      "firstName": "Isabelle",
+      "lastName": "Baggio",
+      "id": 7
+    },
+    {
+      "email": "Verlee.Djikstra@iff.ch",
+      "password": "$2a$10$vZs.hBsoCe4qJvzwi6DqOOT/ro1RevjovrbQyAjflRCVery0Vsf.S",
+      "firstName": "Verlee",
+      "lastName": "Djikstra",
+      "id": 8
+    },
+    {
+      "email": "Ijsbrand.Djikstra@iff.ch",
+      "password": "$2a$10$D/o194sgoFsfDFKk1UoKouoBBHSmGWsKVSTXzHRTxQjsqXkSFkYa.",
+      "firstName": "Ijsbrand",
+      "lastName": "Djikstra",
+      "id": 9
+    },
+    {
+      "email": "Liliana.Kuendig@iff.ch",
+      "password": "$2a$10$CzH73ReuyloCJpD0ovHAiO8G/SVF9U1F96HyZJIChGkBb3UX8JWsG",
+      "firstName": "Liliana",
+      "lastName": "Kuendig",
+      "id": 10
+    },
+    {
+      "email": "Alicia.Kuendig@iff.ch",
+      "password": "$2a$10$paMT.ToQR778J2eRezqrA.6sfRxWvebfK4AmCto/p3Yf/EQwhdFmS",
+      "firstName": "Alicia",
+      "lastName": "Kuendig",
+      "id": 11
+    },
+    {
+      "email": "Joshua.Ehiabi@iff.ch",
+      "password": "$2a$10$1KDmqBcsgmiSMG4W27sJi.RVmgpydnMWxbRKaiY5GL/ZPTnHGgTLO",
+      "firstName": "Joshua",
+      "lastName": "Ehiabi",
+      "id": 12
+    },
+    {
+      "email": "Joshua.Chapman@iff.ch",
+      "password": "$2a$10$sF6go/0EyaBHW/m7Jv/y2ON92Y20/Y0m3sMrLHETA/heHu7HMNbvu",
+      "firstName": "Joshua",
+      "lastName": "Chapman",
+      "id": 13
     }
   ],
   "posts": [
     {
-      "title": "aroisntoiaersntioearntioenarsieotnaeirsontiaornst",
-      "img": "/af4e3fb9-3cb9-4034-ae78-117005bf59c0.png",
-      "description": "arstarstarsstarrsat",
+      "title": "hallo",
+      "img": "/3e04f4ee-8e51-41a6-be76-592ad97d697c.png",
+      "description": "hello",
       "user": "Marco",
-      "id": 1
+      "date": "2022.4.21",
+      "comments": [
+        {
+          "comment": "Hello",
+          "user": "Marco"
+        }
+      ],
+      "id": 2
     },
     {
       "title": "hello",
-      "img": "/c6e5d2dd-0e41-43af-82ff-586eb739ee2f.png",
-      "description": "heiarsntioearsntoiearsntioenarsitasoitnioantisranieo",
-      "user": "Marco",
-      "id": 4
+      "img": "/574fc661-8a20-485a-b7b2-d5d5e60182f0.png",
+      "description": "ariotniaoresntiarstioearsnioetnarsietnaieorsntoiearsntioearsnti",
+      "user": "Rebekka",
+      "date": "2022.4.21",
+      "comments": [
+        {
+          "comment": "moin",
+          "user": "Marco"
+        },
+        {
+          "comment": "ciao\n",
+          "user": "Rebekka"
+        },
+        {
+          "comment": "hello\n",
+          "user": "Rebekka"
+        }
+      ],
+      "id": 3
     },
     {
-      "title": "ientasrientiornetioeantieoarntso",
-      "img": "/79aa0813-164a-40ee-bdef-114f28df3302.png",
-      "description": "neioarsheitoneirasntierasntarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarstttttttttttttttttttttttarstarstarstarstarsttttttttttttttttttttttt\n",
+      "title": "Hello",
+      "img": "/930303a6-ada8-41fc-95df-8ef6b700a287.png",
+      "description": "arstarstarsta",
       "user": "Marco",
-      "id": 5
+      "date": "2022.4.21",
+      "comments": [],
+      "id": 4
     }
   ]
 }

@@ -1,15 +1,17 @@
 import { useRedirectToLogin } from "@lib/session"
 import {useState, useEffect} from "react"
 import { Button } from "react-bootstrap"
-import {updateUser} from "@lib/api"
+import {updateUser, getAllPosts} from "@lib/api"
 import {Form} from "react-bootstrap"
 import { useRouter } from "next/router"
+import MyPosts from "@components/MyPosts"
 
 export default function ProfilePage({session}) {
     useRedirectToLogin(session)
     //const user = session.user
 
     const [user, setUser] = useState(null)
+
     const router = useRouter()
 
     useEffect(() => {
@@ -61,6 +63,8 @@ export default function ProfilePage({session}) {
                 </Form.Group>
                 <Button variant="primary" type="submit">Save</Button>
             </Form>
+            <MyPosts session={session}/>
+
         </div>
     )
 }

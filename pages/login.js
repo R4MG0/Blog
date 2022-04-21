@@ -62,10 +62,8 @@ export default function loginPage({session}){
             [name]: value
         })
     }
-
     return(
         <div>
-            <h1>Name@name.ch // name</h1>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>E-mail</Form.Label>

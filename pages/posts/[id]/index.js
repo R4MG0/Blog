@@ -2,10 +2,15 @@ import { useState, useEffect } from "react"
 import { useRouter } from "next/router"
 import { getPostById} from "@lib/api"
 import { deletePost } from "@lib/api"
-import {Button} from "react-bootstrap"
+import {useRedirectToLogin} from "@lib/session"
+import {Button, Accordion} from "react-bootstrap"
+import Link from "next/link"
 import styles from "./index.module.css"
+import Comment from "@components/Comment"
 
 export default function IdIndexPage({session}){
+
+    useRedirectToLogin(session)
     
     const router = useRouter()
     const { id } = router.query
@@ -26,23 +31,33 @@ export default function IdIndexPage({session}){
         router.push("/")
     }
 
+    function comment(){
+        
+    }
+
     return post &&(
         <div className={styles.singlePost}>
             <div key={post.id}>
                 <h1 className={styles.title}>{post.title}</h1>
                 <img className={styles.image} src={post.img}/>
                 <p className={styles.text}>{post.description}</p>
-                
-                { session.user && 
-                <div>
-                    <Button onClick={kill}>delete</Button> 
-                    <a href={`/posts/${post.id}/edit`}>
-                        <Button>edit</Button>
-                    </a> 
+                <div className={styles.btn}>
+                    <Button onClick={() => router.push('/')}>Back</Button>
                 </div>
-                }
-                
+                <div>
+                    {
+                    session.user?.firstName === post.user && 
+                    <div> 
+                        <Link href={`/posts/${post.id}/edit`}>
+                            <Button>edit</Button>
+                        </Link> 
+                        <Button variant="danger" onClick={kill}>delete</Button> 
+                       {/* <Button style={{ background:'none', border:'none'}} variant="primary" onClick={comment}>💬</Button> */}
+                    </div>
+                    } 
+                </div>
             </div>
+            <Comment session={session} post={post}/>
         </div>
     )
 }

@@ -5,3 +5,8 @@
     align-items: center;
     word-break: break-word;
 }
+
+.hello {
+    margin-top: 1.5rem;
+    width: 50vw;
+}
