@@ -4,6 +4,8 @@ import { updateUser, updateProfilePic } from "@lib/api"
 import { Form } from "react-bootstrap"
 import { useRouter } from "next/router"
 import { useRedirectToLogin } from "@lib/session"
+import styles from './index.module.css'
+import Link from 'next/link'
 
 
 const toBase64 = file => new Promise((resolve, reject) => {
@@ -42,23 +44,13 @@ export default function Settings({ session }) {
 
         const res = await updateProfilePic(user.id, user.img, session.accessToken)
         session.updateUser(res)
-        const resp = await updateUser(user, session.accessToken)
-        
+        // const resp = await updateUser(user, session.accessToken)
+
         router.push('/profile')
         // session.logout()
     }
 
-    const handleChange = (e) => {
 
-        const target = e.target
-        const name = target.name
-        const value = target.value
-
-        setUser({
-            ...user,
-            [name]: value
-        })
-    }
 
     const onFileInputChange = async (e) => {
         const file = e.target.files[0]
@@ -96,7 +88,12 @@ export default function Settings({ session }) {
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                 <Form.Label>Password</Form.Label>
-                <Form.Control type="password" value={user?.password} name="password" onChange={handleChange} />
+                <div className={styles.password}>
+                    <Form.Control type="password" defaultValue="Password" name="password" readOnly plaintext/>
+                    <Link style={{color:'fff', textDecoration:"none"}} href="/profile/settings/password"  >
+                    <Button variant="primary">Change</Button>
+                    </Link>
+                </div>
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                 <Form.Label>First Name</Form.Label>
@@ -109,9 +106,8 @@ export default function Settings({ session }) {
 
             <Form.Group controlId="formFileMultiple" className="mb-3">
                 <Form.Label >Profile pic</Form.Label>
-                {/* {user.img && <Image src={postToEdit.img} style={{width: '100%'}} />} */}
+
                 <Form.Control type="file" defaultValue={user?.img} onChange={onFileInputChange} name="img" />
-                {/* {errors.img && <div style={{color:'red'}}>{errors.img}</div>} */}
             </Form.Group>
             <Button variant="primary" type="submit">Save</Button>
             <Button onClick={() => router.push('/')}>Back</Button>

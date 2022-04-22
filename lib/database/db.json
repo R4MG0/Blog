@@ -11,19 +11,11 @@
   ],
   "users": [
     {
-      "email": "Marco.Herren@iff.ch",
-      "firstName": "Marco",
-      "lastName": "Herren",
-      "img": "",
-      "id": 1,
-      "password": "$2a$10$ShItKwA6PnotViESuX.Gw.ZfKbykWMwzZxKgqofEaOuOkKGCoUyQi"
-    },
-    {
       "email": "Rebekka.Herren@iff.ch",
-      "password": "$2a$10$YnUfBlPucYUEk3Az/RUcaepEd8YEscNxTI54NS3EIiURtzPifuFxW",
+      "password": "$2a$10$KEk2igS9p4P5yVwIxUJ9.uVGoTqpFELbC.PdYscA1srjRMszXitNC",
       "firstName": "Rebekka",
       "lastName": "Herren",
-      "img": "/fb417558-9f27-4e64-ae09-a3d81eb4e23d.jpeg",
+      "img": "",
       "id": 2
     },
     {
@@ -113,6 +105,14 @@
       "lastName": "Baggio",
       "img": "",
       "id": 4
+    },
+    {
+      "email": "Marco.Herren@iff.ch",
+      "firstName": "Marco",
+      "lastName": "Herren",
+      "img": "/94931db1-1bb3-4f16-8440-bd79f5fea998.jpeg",
+      "id": 1,
+      "password": "$2a$10$00vDgrkHPlcH2X6xxkNZX.sBhgKImoWwF.zrlqlgkvCCK064OnboW"
     }
   ],
   "posts": [
@@ -124,6 +124,15 @@
       "date": "2022.4.22",
       "comments": [],
       "id": 1
+    },
+    {
+      "title": "tdhnei",
+      "img": "/825b98b4-d6dc-40ea-bef1-4498cf7570ee.png",
+      "description": "tdhnei",
+      "user": "Marco",
+      "date": "2022.4.22",
+      "comments": [],
+      "id": 2
     }
   ]
 }

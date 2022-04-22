@@ -14,6 +14,7 @@ export default function IndexPage({ session }) {
     useRedirectToLogin(session)
 
     const [posts, setPosts] = useState([])
+    const [user, setUser] = useState({})
 
     useEffect(() => {
 
@@ -24,7 +25,9 @@ export default function IndexPage({ session }) {
         }
 
         loadPosts()
-    }, [])
+
+        setUser(session.user)
+    }, [user])
 
 
 
@@ -44,7 +47,7 @@ export default function IndexPage({ session }) {
                                 <Card.Body>
                                     <div className={styles.profile}>
                                         <div className={styles.img}>
-                                        {session.user.img ? <img src={session.user.img}/> : <img src={profile}/>}
+                                        {user.img ? <img src={user?.img}/> : <img src={profile}/>}
                                         </div> 
                                         {post.user}
                                     </div>
