@@ -1,3 +1,4 @@
+import styles from "./login.module.css"
 import { Form, Button } from "react-bootstrap"
 import { useRedirectToHome } from "@lib/session"
 import { useRouter } from "next/router"
@@ -63,7 +64,7 @@ export default function loginPage({session}){
         })
     }
     return(
-        <div>
+        <div className={styles.container}>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>E-mail</Form.Label>

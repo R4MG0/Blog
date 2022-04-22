@@ -27,10 +27,10 @@ export default function myPosts({ session }) {
                 posts.map(post => {
                     return (
                         <div key={post.id} >
-                            {session.user.firstName === post.user &&
+                            {session.user?.firstName === post.user &&
                                 <Link href={`/posts/${post.id}`} >
                                     <Card className={styles.card}>
-                                        <Card.Img src={post.img} />
+                                        <Card.Img className={styles.img} src={post.img} />
                                         <Card.Header>{post.title}</Card.Header>
                                     </Card>
                                 </Link>

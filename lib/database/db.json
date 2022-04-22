@@ -12,35 +12,26 @@
   "users": [
     {
       "email": "Marco.Herren@iff.ch",
-      "password": "$2a$10$V6wwIiOMMpwO5E7J7eyiOejQXIxu3PyIjPafVhUEqcfKdWqV2g98G",
       "firstName": "Marco",
       "lastName": "Herren",
-      "id": 1
+      "img": "",
+      "id": 1,
+      "password": "$2a$10$ShItKwA6PnotViESuX.Gw.ZfKbykWMwzZxKgqofEaOuOkKGCoUyQi"
     },
     {
       "email": "Rebekka.Herren@iff.ch",
-      "password": "$2a$10$ubaOrmeroWHN3X2V7pezt.Bw9ObJLRFaShN2yglob7RYGmZuLG2rC",
+      "password": "$2a$10$YnUfBlPucYUEk3Az/RUcaepEd8YEscNxTI54NS3EIiURtzPifuFxW",
       "firstName": "Rebekka",
       "lastName": "Herren",
+      "img": "/fb417558-9f27-4e64-ae09-a3d81eb4e23d.jpeg",
       "id": 2
-    },
-    {
-      "email": "Marco@marco.ch",
-      "password": "$2a$10$vwnF1TahJlQvJdSvsLnqteRNxi3VxoOjpTW1pDjeY2Sf9HUo.9E.u",
-      "id": 3
-    },
-    {
-      "email": "Sophia.Baggio@iff.ch",
-      "password": "$2a$10$Enqez6sSsmrnSRdkWh9H1OvO1d1ynXXZVKy3.lpIOQ7NfzlrAn08K",
-      "firstName": "Sophia",
-      "lastName": "Baggio",
-      "id": 4
     },
     {
       "email": "Victoria.Baggio@iff.ch",
       "password": "$2a$10$knoHdTK9USHt9IzrXX5TQuWjSoqZ0YkH9heGnURtDQO5zyCV.eK5y",
       "firstName": "Victoria",
       "lastName": "Baggio",
+      "img": "",
       "id": 5
     },
     {
@@ -48,6 +39,7 @@
       "password": "$2a$10$7WXUfe3kV/5odxu7m7EymO3T7zrpcTlZbWAdUO0r9UgAxG3Et.yK2",
       "firstName": "Neo",
       "lastName": "Djikstra",
+      "img": "",
       "id": 6
     },
     {
@@ -55,6 +47,7 @@
       "password": "$2a$10$9.WgRjXGBlOZNdqIqEUc5eZO2IAsA/CgeMgsj9DGdprQ4LteDCKOa",
       "firstName": "Isabelle",
       "lastName": "Baggio",
+      "img": "",
       "id": 7
     },
     {
@@ -62,6 +55,7 @@
       "password": "$2a$10$vZs.hBsoCe4qJvzwi6DqOOT/ro1RevjovrbQyAjflRCVery0Vsf.S",
       "firstName": "Verlee",
       "lastName": "Djikstra",
+      "img": "",
       "id": 8
     },
     {
@@ -69,6 +63,7 @@
       "password": "$2a$10$D/o194sgoFsfDFKk1UoKouoBBHSmGWsKVSTXzHRTxQjsqXkSFkYa.",
       "firstName": "Ijsbrand",
       "lastName": "Djikstra",
+      "img": "",
       "id": 9
     },
     {
@@ -76,6 +71,7 @@
       "password": "$2a$10$CzH73ReuyloCJpD0ovHAiO8G/SVF9U1F96HyZJIChGkBb3UX8JWsG",
       "firstName": "Liliana",
       "lastName": "Kuendig",
+      "img": "",
       "id": 10
     },
     {
@@ -83,13 +79,15 @@
       "password": "$2a$10$paMT.ToQR778J2eRezqrA.6sfRxWvebfK4AmCto/p3Yf/EQwhdFmS",
       "firstName": "Alicia",
       "lastName": "Kuendig",
+      "img": "",
       "id": 11
     },
     {
-      "email": "Joshua.Ehiabi@iff.ch",
+      "email": "Joshua.Ehiabhi@iff.ch",
       "password": "$2a$10$1KDmqBcsgmiSMG4W27sJi.RVmgpydnMWxbRKaiY5GL/ZPTnHGgTLO",
       "firstName": "Joshua",
-      "lastName": "Ehiabi",
+      "lastName": "Ehiabhi",
+      "img": "",
       "id": 12
     },
     {
@@ -97,54 +95,35 @@
       "password": "$2a$10$sF6go/0EyaBHW/m7Jv/y2ON92Y20/Y0m3sMrLHETA/heHu7HMNbvu",
       "firstName": "Joshua",
       "lastName": "Chapman",
+      "img": "",
       "id": 13
+    },
+    {
+      "email": "test.test@iff.ch",
+      "password": "$2a$10$tnnsuRnC.PibJNerkbTXDu4bnVBcgrkKzFHIwOiwryw.MWgOGZsPK",
+      "firstName": "test",
+      "lastName": "Test",
+      "img": "",
+      "id": 14
+    },
+    {
+      "email": "Sophia.Baggio@iff.ch",
+      "password": "$2a$10$wvoFmQ6gNBFfH31REAiP8.WHLxM.XL.iy4MTi.72kgTYo1NNnL3Pi",
+      "firstName": "Sophia",
+      "lastName": "Baggio",
+      "img": "",
+      "id": 4
     }
   ],
   "posts": [
     {
-      "title": "hallo",
-      "img": "/3e04f4ee-8e51-41a6-be76-592ad97d697c.png",
-      "description": "hello",
-      "user": "Marco",
-      "date": "2022.4.21",
-      "comments": [
-        {
-          "comment": "Hello",
-          "user": "Marco"
-        }
-      ],
-      "id": 2
-    },
-    {
       "title": "hello",
-      "img": "/574fc661-8a20-485a-b7b2-d5d5e60182f0.png",
-      "description": "ariotniaoresntiarstioearsnioetnarsietnaieorsntoiearsntioearsnti",
-      "user": "Rebekka",
-      "date": "2022.4.21",
-      "comments": [
-        {
-          "comment": "moin",
-          "user": "Marco"
-        },
-        {
-          "comment": "ciao\n",
-          "user": "Rebekka"
-        },
-        {
-          "comment": "hello\n",
-          "user": "Rebekka"
-        }
-      ],
-      "id": 3
-    },
-    {
-      "title": "Hello",
-      "img": "/930303a6-ada8-41fc-95df-8ef6b700a287.png",
-      "description": "arstarstarsta",
+      "img": "/c5187b6b-02b6-4e30-af49-9eb202ecdc99.png",
+      "description": "arst",
       "user": "Marco",
-      "date": "2022.4.21",
+      "date": "2022.4.22",
       "comments": [],
-      "id": 4
+      "id": 1
     }
   ]
 }

@@ -10,9 +10,8 @@ export default function Navigation({session}){
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                    { session.user && <Link href="/posts/create" passHref><Nav.Link>Create</Nav.Link></Link>}
+                    { session.user && <Link href="/posts/create" passHref ><Nav.Link>Create</Nav.Link></Link>}
                     { session.user && <Link href="/profile" passHref><Nav.Link >{session.user.firstName}</Nav.Link></Link>}
-                    { session.user && <Link href="#myPosts" passHref><Nav.Link >My Posts</Nav.Link></Link>}
                     </Nav>
                     <Navbar.Collapse className="justify-content-end">
                         <Nav>  

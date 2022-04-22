@@ -162,23 +162,22 @@ export default function Post({session, postToEdit}) {
                 
                 <Form.Group controlId="formFileMultiple" className="mb-3">
                     <Form.Label >Pictures</Form.Label>
-                    {postToEdit && <img src={postToEdit.img} style={{width: '100%'}}/>}
-                    <Form.Control type="file" defaultValue={post.img} onChange={onFileInputChange} name="img"/>
-                    {errors.img && <div style={{color:'red'}}>{errors.img}</div>}
+                        {postToEdit && <img src={postToEdit.img} style={{width: '100%'}} />}
+                        <Form.Control type="file" defaultValue={post.img} onChange={onFileInputChange} name="img"/>
+                        {errors.img && <div style={{color:'red'}}>{errors.img}</div>}
                 </Form.Group>
 
 
                 <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                     <Form.Label>Description</Form.Label>
                     <Form.Control as="textarea" rows={3} name="description" defaultValue={post.description} onChange={handleChange} />
+                    {errors.description && <div style={{color:'red'}}>{errors.description}</div>}
                 </Form.Group>
                 <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail">
                 </Form.Group>
-                <div>
-                    <Button variant="primary" type="submit">Save</Button>
-                    {/* <div className={styles.btn}> */}
-                        <Button className={styles.button} onClick={() => router.push('/')}>Back</Button>
-                    {/* </div> */}
+                <div className={styles.btn}>
+                    <Button variant="primary"  type="submit">Save</Button>
+                    <Button className={styles.button} onClick={() => router.push('/')}>Back</Button>
                 </div>
             </Form>
         </div>
