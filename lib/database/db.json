@@ -16,6 +16,7 @@
       "firstName": "Rebekka",
       "lastName": "Herren",
       "img": "",
+      "role": "user",
       "id": 2
     },
     {
@@ -24,6 +25,7 @@
       "firstName": "Victoria",
       "lastName": "Baggio",
       "img": "",
+      "role": "user",
       "id": 5
     },
     {
@@ -32,6 +34,7 @@
       "firstName": "Neo",
       "lastName": "Djikstra",
       "img": "",
+      "role": "user",
       "id": 6
     },
     {
@@ -40,6 +43,7 @@
       "firstName": "Isabelle",
       "lastName": "Baggio",
       "img": "",
+      "role": "user",
       "id": 7
     },
     {
@@ -48,6 +52,7 @@
       "firstName": "Verlee",
       "lastName": "Djikstra",
       "img": "",
+      "role": "user",
       "id": 8
     },
     {
@@ -56,6 +61,7 @@
       "firstName": "Ijsbrand",
       "lastName": "Djikstra",
       "img": "",
+      "role": "user",
       "id": 9
     },
     {
@@ -64,6 +70,7 @@
       "firstName": "Liliana",
       "lastName": "Kuendig",
       "img": "",
+      "role": "user",
       "id": 10
     },
     {
@@ -72,6 +79,7 @@
       "firstName": "Alicia",
       "lastName": "Kuendig",
       "img": "",
+      "role": "admin",
       "id": 11
     },
     {
@@ -80,6 +88,7 @@
       "firstName": "Joshua",
       "lastName": "Ehiabhi",
       "img": "",
+      "role": "user",
       "id": 12
     },
     {
@@ -88,15 +97,8 @@
       "firstName": "Joshua",
       "lastName": "Chapman",
       "img": "",
+      "role": "user",
       "id": 13
-    },
-    {
-      "email": "test.test@iff.ch",
-      "password": "$2a$10$tnnsuRnC.PibJNerkbTXDu4bnVBcgrkKzFHIwOiwryw.MWgOGZsPK",
-      "firstName": "test",
-      "lastName": "Test",
-      "img": "",
-      "id": 14
     },
     {
       "email": "Sophia.Baggio@iff.ch",
@@ -104,6 +106,7 @@
       "firstName": "Sophia",
       "lastName": "Baggio",
       "img": "",
+      "role": "admin",
       "id": 4
     },
     {
@@ -112,27 +115,28 @@
       "lastName": "Herren",
       "img": "/94931db1-1bb3-4f16-8440-bd79f5fea998.jpeg",
       "id": 1,
+      "role": "admin",
       "password": "$2a$10$00vDgrkHPlcH2X6xxkNZX.sBhgKImoWwF.zrlqlgkvCCK064OnboW"
     }
   ],
   "posts": [
     {
-      "title": "hello",
-      "img": "/c5187b6b-02b6-4e30-af49-9eb202ecdc99.png",
-      "description": "arst",
+      "title": "Hello",
+      "img": "/fb6be2d8-3dc6-4a44-9826-9225828b4b35.png",
+      "description": "iarsontioaresntiearnsieanrsieotnariost",
       "user": "Marco",
-      "date": "2022.4.22",
+      "date": "2022.4.25 13:4",
       "comments": [],
-      "id": 1
+      "id": 3
     },
     {
-      "title": "tdhnei",
-      "img": "/825b98b4-d6dc-40ea-bef1-4498cf7570ee.png",
-      "description": "tdhnei",
+      "title": "arstarstarst",
+      "img": "/9c8cb690-e3a5-4dd2-a9f5-31cf380c61bc.png",
+      "description": "arstarstarstar",
       "user": "Marco",
-      "date": "2022.4.22",
+      "date": "2022.4.25 13:6",
       "comments": [],
-      "id": 2
+      "id": 4
     }
   ]
 }

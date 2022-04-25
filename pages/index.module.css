@@ -32,10 +32,17 @@
     height: 67vh;
 }
 
+@media (max-width: 1500px){
+    .hello{
+        width: 60vw;
+        height: 73vh;
+    }
+}
+
 @media (max-width: 1150px){
     .hello{
         width: 60vw;
-        height: 75vh
+        height: 75vh;
     }
 }
 

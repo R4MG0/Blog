@@ -90,7 +90,7 @@ export default function Settings({ session }) {
                 <Form.Label>Password</Form.Label>
                 <div className={styles.password}>
                     <Form.Control type="password" defaultValue="Password" name="password" readOnly plaintext/>
-                    <Link style={{color:'fff', textDecoration:"none"}} href="/profile/settings/password"  >
+                    <Link style={{color:'fff', textDecoration:"none"}} href="/profile/settings/password" passHref>
                     <Button variant="primary">Change</Button>
                     </Link>
                 </div>
@@ -103,10 +103,13 @@ export default function Settings({ session }) {
                 <Form.Label>Last Name</Form.Label>
                 <Form.Control defaultValue={user?.lastName} plaintext readOnly name="lastName" />
             </Form.Group>
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                <Form.Label>Role</Form.Label>
+                <Form.Control defaultValue={user?.role} plaintext readOnly name="role" />
+            </Form.Group>
 
             <Form.Group controlId="formFileMultiple" className="mb-3">
                 <Form.Label >Profile pic</Form.Label>
-
                 <Form.Control type="file" defaultValue={user?.img} onChange={onFileInputChange} name="img" />
             </Form.Group>
             <Button variant="primary" type="submit">Save</Button>

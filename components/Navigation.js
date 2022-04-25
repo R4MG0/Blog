@@ -12,6 +12,7 @@ export default function Navigation({ session }) {
                     <Nav className="me-auto">
                     { session.user && <Link href="/posts/create" passHref ><Nav.Link style={{textDecoration:"none"}}>Create</Nav.Link></Link>}
                     { session.user && <Link href="/profile" passHref><Nav.Link style={{textDecoration:"none"}}>{session.user.firstName}</Nav.Link></Link>}
+                   { session.user?.role === "admin" && <Link href="/register" passHref><Nav.Link style={{textDecoration:"none"}}>Register</Nav.Link></Link>}
                     </Nav>
                     <Navbar.Collapse className="justify-content-end">
                         <Nav>  

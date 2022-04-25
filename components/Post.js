@@ -73,8 +73,8 @@ export default function Post({session, postToEdit}) {
 
     const today = new Date();
     const date = today.getFullYear()+'.'+(today.getMonth()+1)+'.'+today.getDate();
-    // var time = today.getHours() + ":" + today.getMinutes()
-    // var dateTime = date+' '+time;
+    var time = today.getHours() + ":" + today.getMinutes()
+    var dateTime = date+' '+time;
 
     useEffect(() => {
         if (postToEdit) {
@@ -129,7 +129,7 @@ export default function Post({session, postToEdit}) {
 
         post.img = imagePath
         post.user = session.user.firstName 
-        post.date = date
+        post.date = dateTime
         
         const result = validateModel(post)
 
@@ -166,7 +166,6 @@ export default function Post({session, postToEdit}) {
                         <Form.Control type="file" defaultValue={post.img} onChange={onFileInputChange} name="img"/>
                         {errors.img && <div style={{color:'red'}}>{errors.img}</div>}
                 </Form.Group>
-
 
                 <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                     <Form.Label>Description</Form.Label>
