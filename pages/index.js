@@ -21,7 +21,6 @@ export default function IndexPage({ session }) {
         const loadPosts = async () => {
             const response = await getAllPosts()
             setPosts(response)
-
         }
 
         loadPosts()

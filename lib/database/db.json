@@ -11,105 +11,6 @@
   ],
   "users": [
     {
-      "email": "Rebekka.Herren@iff.ch",
-      "password": "$2a$10$KEk2igS9p4P5yVwIxUJ9.uVGoTqpFELbC.PdYscA1srjRMszXitNC",
-      "firstName": "Rebekka",
-      "lastName": "Herren",
-      "img": "",
-      "role": "user",
-      "id": 2
-    },
-    {
-      "email": "Victoria.Baggio@iff.ch",
-      "password": "$2a$10$knoHdTK9USHt9IzrXX5TQuWjSoqZ0YkH9heGnURtDQO5zyCV.eK5y",
-      "firstName": "Victoria",
-      "lastName": "Baggio",
-      "img": "",
-      "role": "user",
-      "id": 5
-    },
-    {
-      "email": "Neo.Djikstra@iff.ch",
-      "password": "$2a$10$7WXUfe3kV/5odxu7m7EymO3T7zrpcTlZbWAdUO0r9UgAxG3Et.yK2",
-      "firstName": "Neo",
-      "lastName": "Djikstra",
-      "img": "",
-      "role": "user",
-      "id": 6
-    },
-    {
-      "email": "Isabelle.Baggio@iff.ch",
-      "password": "$2a$10$9.WgRjXGBlOZNdqIqEUc5eZO2IAsA/CgeMgsj9DGdprQ4LteDCKOa",
-      "firstName": "Isabelle",
-      "lastName": "Baggio",
-      "img": "",
-      "role": "user",
-      "id": 7
-    },
-    {
-      "email": "Verlee.Djikstra@iff.ch",
-      "password": "$2a$10$vZs.hBsoCe4qJvzwi6DqOOT/ro1RevjovrbQyAjflRCVery0Vsf.S",
-      "firstName": "Verlee",
-      "lastName": "Djikstra",
-      "img": "",
-      "role": "user",
-      "id": 8
-    },
-    {
-      "email": "Ijsbrand.Djikstra@iff.ch",
-      "password": "$2a$10$D/o194sgoFsfDFKk1UoKouoBBHSmGWsKVSTXzHRTxQjsqXkSFkYa.",
-      "firstName": "Ijsbrand",
-      "lastName": "Djikstra",
-      "img": "",
-      "role": "user",
-      "id": 9
-    },
-    {
-      "email": "Liliana.Kuendig@iff.ch",
-      "password": "$2a$10$CzH73ReuyloCJpD0ovHAiO8G/SVF9U1F96HyZJIChGkBb3UX8JWsG",
-      "firstName": "Liliana",
-      "lastName": "Kuendig",
-      "img": "",
-      "role": "user",
-      "id": 10
-    },
-    {
-      "email": "Alicia.Kuendig@iff.ch",
-      "password": "$2a$10$paMT.ToQR778J2eRezqrA.6sfRxWvebfK4AmCto/p3Yf/EQwhdFmS",
-      "firstName": "Alicia",
-      "lastName": "Kuendig",
-      "img": "",
-      "role": "admin",
-      "id": 11
-    },
-    {
-      "email": "Joshua.Ehiabhi@iff.ch",
-      "password": "$2a$10$1KDmqBcsgmiSMG4W27sJi.RVmgpydnMWxbRKaiY5GL/ZPTnHGgTLO",
-      "firstName": "Joshua",
-      "lastName": "Ehiabhi",
-      "img": "",
-      "role": "user",
-      "id": 12
-    },
-    {
-      "email": "Joshua.Chapman@iff.ch",
-      "password": "$2a$10$sF6go/0EyaBHW/m7Jv/y2ON92Y20/Y0m3sMrLHETA/heHu7HMNbvu",
-      "firstName": "Joshua",
-      "lastName": "Chapman",
-      "img": "",
-      "role": "user",
-      "id": 13
-    },
-    {
-      "email": "Sophia.Baggio@iff.ch",
-      "password": "$2a$10$wvoFmQ6gNBFfH31REAiP8.WHLxM.XL.iy4MTi.72kgTYo1NNnL3Pi",
-      "firstName": "Sophia",
-      "lastName": "Baggio",
-      "img": "",
-      "role": "admin",
-      "id": 4
-    },
-    {
       "email": "Marco.Herren@iff.ch",
       "firstName": "Marco",
       "lastName": "Herren",
@@ -117,6 +18,24 @@
       "id": 1,
       "role": "admin",
       "password": "$2a$10$00vDgrkHPlcH2X6xxkNZX.sBhgKImoWwF.zrlqlgkvCCK064OnboW"
+    },
+    {
+      "email": "test.test@iff.ch",
+      "password": "$2a$10$Debg/9IbTl8rE..pklYLyeQXR5g/Yl7Sa0WSg6h891rzDjHLRjiqa",
+      "firstName": "test",
+      "lastName": "test",
+      "role": "user",
+      "img": "",
+      "id": 14
+    },
+    {
+      "email": "Ivan@ivan.ch",
+      "password": "$2a$10$jWcIP.niGpRgh3FOJBdYZeNAntVJA.hr7y8411.VpB51I5AQdwi/q",
+      "firstName": "Ivan",
+      "lastName": "Cammarota",
+      "role": "admin",
+      "img": "",
+      "id": 15
     }
   ],
   "posts": [
@@ -137,6 +56,15 @@
       "date": "2022.4.25 13:6",
       "comments": [],
       "id": 4
+    },
+    {
+      "title": "atniosntioasrntioarnts",
+      "img": "/fe4676f4-f79c-4707-995d-5ab98f40ad39.jpeg",
+      "description": "arstarstarst",
+      "user": "Marco",
+      "date": "2022.4.27 8:28",
+      "comments": [],
+      "id": 5
     }
   ]
 }

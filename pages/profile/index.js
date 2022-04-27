@@ -40,7 +40,6 @@ export default function ProfilePage({session}) {
                 </div>
             </div>
             <MyPosts session={session}/>
-
         </div>
     )
 }

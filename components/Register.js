@@ -48,7 +48,7 @@ function validateModel(user){
     }
 
     if(user.role === "" || user.role === null){
-        errors.role = "pls enter a Role"
+        errors.role = "pls select a Role"
         isValid = false
     }
 
@@ -158,7 +158,7 @@ export default function Register({session}){
                         <option>user</option>
                         <option>admin</option>
                     </Form.Select>
-                    {errors.role && <div style={{color:'f00'}}>{errors.role}</div>}
+                    {errors.role && <div style={{color:'red'}}>{errors.role}</div>}
                 </Form.Group>
                 <Form.Group controlId="formFileMultiple" className="mb-3">
                     <Form.Label >Profile pic</Form.Label>

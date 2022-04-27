@@ -8,7 +8,6 @@ export default function registerPage({ session }) {
     return ( 
         <div>
             <Register session={session}/>
-
         </div> 
         )
     }
