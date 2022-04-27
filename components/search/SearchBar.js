@@ -39,8 +39,8 @@ export default function FilterableList({session, users}) {
                 session.user && 
                 newFilteredUser.map((user) => {
                         return(
-                            <div className={styles.user}>
-                                <Link href="/">
+                            <div className={styles.user} key={user.id}>
+                                <Link href={`/users/${user.id}`} passHref>
                                     <Card style={{ width: '30rem', marginTop: '2rem' }} className={styles.card}>      
                                         <Card.Body>
                                             <div className={styles.profile}>

@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react"
 import { Button } from "react-bootstrap"
-import { updateUser, updateProfilePic } from "@lib/api"
+import { updateUser, updateProfilePic, getAllPosts, updatePost } from "@lib/api"
 import { Form } from "react-bootstrap"
 import { useRouter } from "next/router"
 import { useRedirectToLogin } from "@lib/session"
@@ -22,6 +22,7 @@ export default function Settings({ session }) {
     useRedirectToLogin(session)
 
     const [user, setUser] = useState({})
+    const [posts, setPosts] = useState()
     const router = useRouter()
 
     const [base64Image, setBase64Image] = useState("")
@@ -31,8 +32,16 @@ export default function Settings({ session }) {
 
 
     useEffect(() => {
+
         setUser(session.user)
-    }, [session.user])
+        const loadPage = async () => {
+            const response = await getAllPosts()
+            if (session.user) {
+                setPosts(response.filter(post => post.user === session.user.firstName))
+            }
+        }
+        loadPage();
+    }, [session.user]);
 
 
 
@@ -42,9 +51,13 @@ export default function Settings({ session }) {
 
         user.img = imagePath
 
+        for (let i = 0; i < posts.length; i++) {
+            posts[i].profileImg = imagePath;
+            await updatePost(posts[i], session.accessToken)
+        }
+
         const res = await updateProfilePic(user.id, user.img, session.accessToken)
         session.updateUser(res)
-        // const resp = await updateUser(user, session.accessToken)
 
         router.push('/profile')
         // session.logout()

@@ -1,10 +1,9 @@
 import styles from "./index.module.css"
 import Link from "next/link"
-import {useAccordionButton} from "react-bootstrap"
 import { useRedirectToLogin } from "@lib/session"
 import { useEffect, useState } from "react"
-import { getAllPosts } from "@lib/api"
-import { Button, ListGroup, ListGroupItem, Card, Accordion } from "react-bootstrap"
+import { getAllPosts, getUserByFirstName } from "@lib/api"
+import { Button, ListGroup, ListGroupItem, Card} from "react-bootstrap"
 
 
 const profile = "https://banner2.cleanpng.com/20180525/fbc/kisspng-computer-icons-user-symbol-company-profile-5b084df3719b03.2755377715272708994653.jpg"
@@ -15,7 +14,6 @@ export default function IndexPage({ session }) {
 
     const [posts, setPosts] = useState([])
     const [user, setUser] = useState({})
-
     useEffect(() => {
 
         const loadPosts = async () => {
@@ -26,7 +24,7 @@ export default function IndexPage({ session }) {
         loadPosts()
 
         setUser(session.user)
-    }, [user])
+    }, [])
 
 
 
@@ -35,6 +33,7 @@ export default function IndexPage({ session }) {
             {session.user &&
                 posts.map(post => {
                     return (
+                        <Link href={`/posts/${post.id}`}>
                         <div key={post.id}>
                             <Card className={styles.hello}>
                                 <ListGroup className="list-group-flush">
@@ -44,16 +43,33 @@ export default function IndexPage({ session }) {
                                 </ListGroup>
                                 <Card.Img variant="top" src={post.img} className="img"></Card.Img>
                                 <Card.Body>
-                                    <div className={styles.profile}>
-                                        <div className={styles.img}>
-                                        {user.img ? <img src={user?.img}/> : <img src={profile}/>}
-                                        </div> 
-                                        {post.user}
-                                    </div>
-                                        <div className={styles.topRight}>
-                                            <Card.Subtitle align="right">{post.date}</Card.Subtitle>
+                                    {session.user.firstName === post.user ? 
+                                    <Link href={`/profile`}>
+                                        <div>
+                                            <div className={styles.profile}>
+                                                <div className={styles.img}>
+                                                {post?.profileImg ? <img src={post.profileImg}/> : <img src={profile}/>}
+                                                </div>
+                                                <Card.Text className={styles.card}>{post.user}</Card.Text> 
+                                            </div>
                                         </div>
-                                    
+                                    </Link> 
+                                    : 
+                                    <Link href={`/users/${post?.userID}`}>
+                                        <div>
+                                            <div className={styles.profile}>
+                                                <div className={styles.img}>
+                                                {post?.profileImg ? <img src={post.profileImg}/> : <img src={profile}/>}
+                                                </div>
+                                                <Card.Text className={styles.card}>{post.user}</Card.Text> 
+                                            </div>
+                                        </div>
+                                    </Link>
+                                    }
+                                    <div className={styles.topRight}>
+                                        <Card.Subtitle align="right">{post.date}</Card.Subtitle>
+                                    </div>
+   
                                     <Link href={`/posts/${post.id}`}>
                                         <Button variant="primary" >
                                             Details
@@ -67,6 +83,7 @@ export default function IndexPage({ session }) {
                                 </Card.Body>
                             </Card>
                         </div>
+                        </Link>
                     )
                 })
             }

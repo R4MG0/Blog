@@ -1,24 +1,30 @@
-import { useRedirectToLogin } from "@lib/session"
-import {useState, useEffect} from "react"
-import { Button } from "react-bootstrap"
-import {updateUser, getAllPosts} from "@lib/api"
-import {Form} from "react-bootstrap"
+import { useState, useEffect } from "react"
 import { useRouter } from "next/router"
+import { getUserById} from "@lib/api"
+import {useRedirectToLogin} from "@lib/session"
+import UserPosts from "@components/UserPosts"
 import Link from "next/link"
-import MyPosts from "@components/MyPosts"
 import styles from "./index.module.css"
 
 
 const profile = "https://banner2.cleanpng.com/20180525/fbc/kisspng-computer-icons-user-symbol-company-profile-5b084df3719b03.2755377715272708994653.jpg"
-export default function ProfilePage({session}) {
+
+export default function IdIndexPage({session}){
     useRedirectToLogin(session)
 
-
-    const [user, setUser] = useState()
+    const router = useRouter()
+    const { id } = router.query
+    const [user, setUser] = useState(null)
 
     useEffect(() => {
-        setUser(session.user)
-    },[session.user])
+        if(!id) return
+        const loadUser = async () => {
+            const response = await getUserById(id)
+            setUser(response)
+        }
+        loadUser()
+    }, [id])
+
 
 
     return user && (
@@ -34,13 +40,10 @@ export default function ProfilePage({session}) {
                         </div>
                     <h2 style={{marginLeft:'100px'}}>{user.firstName} {user.lastName}</h2>
                     </div>
-                    <Link href="/profile/settings">
-                        <Button variant="primary">Settings</Button>
-                    </Link>
                 </div>
             </div>
-            <h1>Your Posts</h1>
-            <MyPosts session={session}/>
+            <h1>Posts</h1>
+            <UserPosts session={session} user={user}/>
         </div>
     )
 }

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import { getAllPosts } from "@lib/api"
 import Link from "next/link"
 
-export default function myPosts({ session }) {
+export default function UserPosts({session, user}){
 
     const [posts, setPosts] = useState([])
 
@@ -17,7 +17,6 @@ export default function myPosts({ session }) {
         loadPosts()
     }, [])
 
-
     return (
         <div>
 
@@ -27,7 +26,7 @@ export default function myPosts({ session }) {
                 posts.map(post => {
                     return (
                         <div key={post.id} >
-                            {session.user?.firstName === post.user &&
+                            {user?.firstName === post.user &&
                                 <Link href={`/posts/${post.id}`} >
                                     <Card className={styles.card}>
                                         <Card.Img className={styles.img} src={post.img} />

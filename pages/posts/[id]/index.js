@@ -31,9 +31,6 @@ export default function IdIndexPage({session}){
         router.push("/")
     }
 
-    function comment(){
-        
-    }
 
     return post &&(
         <div className={styles.singlePost}>

@@ -14,7 +14,7 @@
       "email": "Marco.Herren@iff.ch",
       "firstName": "Marco",
       "lastName": "Herren",
-      "img": "/94931db1-1bb3-4f16-8440-bd79f5fea998.jpeg",
+      "img": "",
       "id": 1,
       "role": "admin",
       "password": "$2a$10$00vDgrkHPlcH2X6xxkNZX.sBhgKImoWwF.zrlqlgkvCCK064OnboW"
@@ -25,8 +25,8 @@
       "firstName": "test",
       "lastName": "test",
       "role": "user",
-      "img": "",
-      "id": 14
+      "img": "/7e1f2a0a-4209-4a3e-afcf-76bb203c2602.png",
+      "id": 2
     },
     {
       "email": "Ivan@ivan.ch",
@@ -35,36 +35,20 @@
       "lastName": "Cammarota",
       "role": "admin",
       "img": "",
-      "id": 15
+      "id": 3
     }
   ],
   "posts": [
     {
-      "title": "Hello",
-      "img": "/fb6be2d8-3dc6-4a44-9826-9225828b4b35.png",
-      "description": "iarsontioaresntiearnsieanrsieotnariost",
+      "title": "f",
+      "img": "/51c09a65-39eb-409d-85f4-4712d7df9979.jpeg",
+      "description": "rgn",
       "user": "Marco",
-      "date": "2022.4.25 13:4",
+      "date": "2022.4.27 16:19",
       "comments": [],
-      "id": 3
-    },
-    {
-      "title": "arstarstarst",
-      "img": "/9c8cb690-e3a5-4dd2-a9f5-31cf380c61bc.png",
-      "description": "arstarstarstar",
-      "user": "Marco",
-      "date": "2022.4.25 13:6",
-      "comments": [],
-      "id": 4
-    },
-    {
-      "title": "atniosntioasrntioarnts",
-      "img": "/fe4676f4-f79c-4707-995d-5ab98f40ad39.jpeg",
-      "description": "arstarstarst",
-      "user": "Marco",
-      "date": "2022.4.27 8:28",
-      "comments": [],
-      "id": 5
+      "userID": 1,
+      "profileImg": "",
+      "id": 1
     }
   ]
 }

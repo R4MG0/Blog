@@ -74,7 +74,7 @@ export default function Post({session, postToEdit}) {
     const today = new Date();
     const date = today.getFullYear()+'.'+(today.getMonth()+1)+'.'+today.getDate();
     var time = today.getHours() + ":" + today.getMinutes()
-    var dateTime = date+' '+time;
+    var dateTime = date+' '+ time;
 
     useEffect(() => {
         if (postToEdit) {
@@ -130,6 +130,8 @@ export default function Post({session, postToEdit}) {
         post.img = imagePath
         post.user = session.user.firstName 
         post.date = dateTime
+        post.userID = session.user.id
+        post.profileImg = session.user.img
         
         const result = validateModel(post)
 
