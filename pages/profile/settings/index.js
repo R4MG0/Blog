@@ -104,7 +104,7 @@ export default function Settings({ session }) {
                 <div className={styles.password}>
                     <Form.Control type="password" defaultValue="Password" name="password" readOnly plaintext/>
                     <Link style={{color:'fff', textDecoration:"none"}} href="/profile/settings/password" passHref>
-                    <Button variant="primary">Change</Button>
+                    <Button variant="primary" style={{color:'white', textDecoration:"none"}}>Change</Button>
                     </Link>
                 </div>
             </Form.Group>

@@ -33,3 +33,18 @@
 .name {
     margin-left: 2.5rem;
 }
+
+.button {
+    justify-content: flex-end;
+    margin-left: 2.5rem;
+}
+
+.btn{
+    position: relative;
+}
+
+.btn button{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}

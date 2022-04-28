@@ -37,7 +37,10 @@ export default function IdIndexPage({session}){
             <div key={post.id}>
                 <h1 className={styles.title}>{post.title}</h1>
                 <img className={styles.image} src={post.img}/>
-                <p className={styles.text}>{post.description}</p>
+                <div>
+                    <p className={styles.text}>{post.description}</p>
+                    <p className={styles.dateTime}>{`${post.date} ${post.time}`}</p>
+                </div>
                 <div className={styles.btn}>
                     <Button onClick={() => router.push('/')}>Back</Button>
                 </div>

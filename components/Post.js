@@ -19,7 +19,9 @@ const defaultModel = {
     description: "",
     user: "",
     date: "",
-    comments: []
+    time:"",
+    comments: [],
+    userID: ""
 }
 function validateModel(post) {
     const errors = {
@@ -28,6 +30,7 @@ function validateModel(post) {
         description: "",
         user: "",
         date: "",
+        userID: "",
         comments: ""
     }
     let isValid = true
@@ -50,8 +53,7 @@ function validateModel(post) {
         isValid = false;
     }
 
-
-    if(post.img === null || post.img.length === 0) {
+    if(post.img === null || post.img.length === 0 || post.img === undefined) {
         errors.img = "Please put an img"
         isValid = false;
     }
@@ -78,8 +80,8 @@ export default function Post({session, postToEdit}) {
 
     const today = new Date();
     const date = today.getFullYear()+'.'+(today.getMonth()+1)+'.'+today.getDate();
-    var time = today.getHours() + ":" + today.getMinutes()
-    var dateTime = date+' '+ time;
+    const time = today.getHours() + ":" + today.getMinutes()
+    const dateTime = date+' '+ time;
 
     useEffect(() => {
         if (postToEdit) {
@@ -132,25 +134,45 @@ export default function Post({session, postToEdit}) {
 
         setErrors(defaultModel)
 
-        post.img = imagePath
-        post.user = session.user.firstName 
-        post.date = dateTime
-        post.userID = session.user.id
-        post.profileImg = session.user.img
-        
-        const result = validateModel(post)
-
-        if(!result.isValid) {
-            setErrors(result.errors)
-            setIsLoading(false)
-            return
-        }
-
         if(post.id){
+            if(imagePath === null || imagePath === undefined || imagePath === ""){
+                if(post.img === "" || post.img === undefined || post.img === null){
+                    post.img = imagePath
+                }else{
+                    post.img = postToEdit.img
+                }
+            }else{
+                post.img = imagePath
+            }
+
+            const result = validateModel(post)
+
+
+            if(!result.isValid) {
+                setErrors(result.errors)
+                setIsLoading(false)
+                return
+            }
+
             await updatePost(post, session.accessToken)
             setPost(post)
             router.push(`/posts/${post.id}`)
         }else{
+            post.img = imagePath
+            post.user = session.user.firstName 
+            post.date = date
+            post.time = time
+            post.userID = session.user.id
+            post.profileImg = session.user.img
+
+            const result = validateModel(post)
+
+            if(!result.isValid) {
+                setErrors(result.errors)
+                setIsLoading(false)
+                return
+            }
+
             const newPost = await createPost(post, session.accessToken)
             router.push(`/`)
         }
@@ -168,8 +190,8 @@ export default function Post({session, postToEdit}) {
                 </Form.Group>
                 
                 <Form.Group controlId="formFileMultiple" className="mb-3">
-                    <Form.Label >Pictures</Form.Label>
-                        {postToEdit && <img src={postToEdit.img} style={{width: '100%'}} />}
+                    <Form.Label >Pictures: </Form.Label>
+                        {postToEdit && <img src={postToEdit.img} style={{height:'100%' , width: '100%'}} />}
                         <Form.Control type="file" defaultValue={post.img} onChange={onFileInputChange} name="img"/>
                         {errors.img && <div style={{color:'red'}}>{errors.img}</div>}
                 </Form.Group>

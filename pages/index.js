@@ -1,5 +1,6 @@
 import styles from "./index.module.css"
 import Link from "next/link"
+import Image from "next/image"
 import { useRedirectToLogin } from "@lib/session"
 import { useEffect, useState } from "react"
 import { getAllPosts, getUserByFirstName } from "@lib/api"
@@ -18,7 +19,10 @@ export default function IndexPage({ session }) {
 
         const loadPosts = async () => {
             const response = await getAllPosts()
-            setPosts(response)
+            
+            let tmp = response.reverse()
+
+            setPosts(tmp)
         }
 
         loadPosts()
@@ -67,7 +71,7 @@ export default function IndexPage({ session }) {
                                     </Link>
                                     }
                                     <div className={styles.topRight}>
-                                        <Card.Subtitle align="right">{post.date}</Card.Subtitle>
+                                        <Card.Subtitle align="right">{post.date} {post.time}</Card.Subtitle>
                                     </div>
    
                                     <Link href={`/posts/${post.id}`}>

@@ -21,8 +21,8 @@ function validateModel(userData) {
         isValid = false
     }
     if (userData.password === "") {
-                errors.password = "Password can't be blank"
-                isValid = false
+        errors.password = "Password can't be blank"
+        isValid = false
     }
     return { errors, isValid }
 }
@@ -37,7 +37,6 @@ export default function loginPage({session}){
     const [errors, setErrors] = useState(defaultModel)
 
     const handleSubmit = async (e) => {
-
         e.preventDefault()
 
         const result = validateModel(userData)
@@ -46,8 +45,6 @@ export default function loginPage({session}){
             setErrors(result.errors)
             return
         }
-
-        
         const resp = await login(userData)
         session.login(resp)
         router.push("/")

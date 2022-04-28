@@ -12,6 +12,7 @@
     width: auto; 
     height: 100%; 
     margin-left: -30px;
+    /* margin-right: -20px; */
 }
 
 .profile {
@@ -35,8 +36,7 @@
 
 .hello {
     margin-top: 1.5rem;
-    width: 60vw;
-    height: 67vh;
+
 }
 
 @media (min-width: 1920px) {
@@ -65,7 +65,7 @@
 @media (max-width: 1300px){
     .hello{
         width: 70vw;
-        height: 73vh;
+        height: 75vh;
     }
 }
 
@@ -153,6 +153,6 @@
 @media (max-width: 380px) {
     .hello{
         width:95vw;
-        height:45vh;
+        height:57vh;
     }
 }

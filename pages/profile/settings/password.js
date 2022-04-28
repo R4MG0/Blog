@@ -5,16 +5,19 @@ import {updateUser} from "@lib/api"
 import {Form, Button} from "react-bootstrap"
 import Link from 'next/link'
 
+const defaultModel = {
+    password:""
+}
 
-function validatePasswords(password1, password2) {
+function validatePassword(password) {
     let error = {
-        Both: ""
+        password:""
     }
     let isValid = true
-
-    if(password1 !== password2) {
-        error.Both = "The passwords dosen't match each other"
-        let isValid = false
+    alert(password)
+    if(password.trim() === "") {
+        error.password = "The password can't be empty"
+        isValid = false
     }
 
     return{error, isValid}
@@ -24,10 +27,9 @@ export default function Password({ session }) {
 
     useRedirectToLogin(session)
 
-    const [user, setUser] = useState({})
-    const [error, setError] = useState("")
-    const [password, setPassword] = useState("")
-    const [passwords, setPasswords] = useState("")
+    const [user, setUser] = useState(defaultModel)
+    const [error, setError] = useState(defaultModel)
+    const [password, setPassword] = useState(defaultModel)
     const router = useRouter()
 
     useEffect(() => {
@@ -41,33 +43,23 @@ export default function Password({ session }) {
         const name = target.name
         const value = target.value
 
-        setUser({
-            ...user,
-            [name]: value
-        })
-    }
-
-    const handleChange2 = (e) => {
-
-        const target = e.target
-        const name = target.name
-        const value = target.value
-
         setPassword({
             ...password,
             [name]: value
         })
-        alert(JSON.stringify(password))
     }
 
 
-    const handlesubmit = async (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
 
-        const validate = validatePasswords(password, user.password)
+        user.password = password.password
+        
+        const validate = validatePassword(user.password)
         
         if(!validate.isValid) {
             setError(validate.error)
+            return
         }
 
         const resp = await updateUser(user, session.accessToken)
@@ -77,15 +69,18 @@ export default function Password({ session }) {
     }
 
     return (
-        <Form onSubmit={handlesubmit}>
+        <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                <Form.Label>Password</Form.Label>
                 <div>
-                    <Form.Control type="password" defaultValue="Password" name="password" onChange={handleChange}/>
-                    <Form.Control style={{marginTop: "1rem"}} type="password" name="password" onChange={handleChange2}/>
-                    {error && <div style={{color:'red'}}>{error}</div>}
-                    <Button variant="primary" type="submit">Change</Button>
-                    <Button onClick={() => router.push('/profile/settings')}>Back</Button>
+                    <Form.Label>Password</Form.Label>
+                    <Form.Control type="password" name="password" onChange={handleChange}/>
+                    {/* <Form.Label style={{marginTop: "1rem"}}>Retype password</Form.Label> */}
+                    {error.password && <div style={{color:'red'}}>{error.password}</div>}
+                    {/* <Form.Control  type="password" name="password" onChange={handleChange}/> */}
+                    <div style={{marginTop:'1.5rem'}}>
+                        <Button variant="primary" type="submit">Change</Button>
+                        <Button onClick={() => router.push('/profile/settings')}>Back</Button>
+                    </div>
                 </div>
             </Form.Group>
         </Form>

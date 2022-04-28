@@ -11,71 +11,54 @@
   ],
   "users": [
     {
-      "email": "Marco.Herren@iff.ch",
-      "firstName": "Marco",
-      "lastName": "Herren",
+      "email": "test@test.ch",
+      "password": "$2a$10$Cm5pnEh.5p2c3r1eh75QAel.Zx9PkrKmlLUhg9AaLN51T6fSLCUom",
+      "firstName": "Test",
+      "lastName": "Test",
+      "role": "user",
       "img": "",
-      "id": 1,
-      "role": "admin",
-      "password": "$2a$10$00vDgrkHPlcH2X6xxkNZX.sBhgKImoWwF.zrlqlgkvCCK064OnboW"
+      "id": 3
     },
     {
-      "email": "test.test@iff.ch",
-      "password": "$2a$10$Debg/9IbTl8rE..pklYLyeQXR5g/Yl7Sa0WSg6h891rzDjHLRjiqa",
-      "firstName": "test",
-      "lastName": "test",
-      "role": "user",
-      "img": "/7e1f2a0a-4209-4a3e-afcf-76bb203c2602.png",
-      "id": 2
+      "email": "Marco.Herren@iff.ch",
+      "password": "$2a$10$4A8zKM71qtRN0Q8HrVjDzePQvKUqO1hqfWIBbd48eexvXmd2Zh0VS",
+      "firstName": "Marco",
+      "lastName": "Herren",
+      "role": "admin",
+      "img": "",
+      "id": 4
     },
     {
       "email": "Ivan@ivan.ch",
-      "password": "$2a$10$jWcIP.niGpRgh3FOJBdYZeNAntVJA.hr7y8411.VpB51I5AQdwi/q",
+      "password": "$2a$10$qy8maQeYIv7XArCrSPjVt.Go0zsvOR1uu8/AmFg34dp9PyQLkXWg6",
       "firstName": "Ivan",
       "lastName": "Cammarota",
       "role": "admin",
       "img": "",
-      "id": 3
+      "id": 5
+    },
+    {
+      "email": "Simi@simi.ch",
+      "password": "$2a$10$B.q19YaRlDmwZveUVD5XrOwL11j9/5BxedZL10.m6vL8yi7XdH0Ni",
+      "firstName": "Simeon Tom",
+      "lastName": "Trumpf",
+      "role": "user",
+      "img": "",
+      "id": 6
     }
   ],
   "posts": [
     {
-      "title": "Hello",
-      "img": "/aa178354-51e2-4bd2-ba0e-9151a989a9f5.png",
-      "description": "hello\n",
-      "user": "Marco",
-      "date": "2022.4.28 7:34",
-      "comments": [
-        {
-          "comment": "a",
-          "user": "Marco"
-        }
-      ],
-      "userID": 1,
-      "profileImg": "",
-      "id": 1
-    },
-    {
-      "title": " arstarstarstarstartrastarstarstarstars",
-      "img": "/514c2204-9440-498e-99c8-85404250ca86.png",
+      "title": "arst",
+      "img": "/148bd259-ddbb-4b2d-874d-bd5258ce69c2.png",
       "description": "hello",
       "user": "Marco",
-      "date": "2022.4.28 7:40",
+      "date": "2022.4.28",
+      "time": "14:57",
       "comments": [],
-      "userID": 1,
+      "userID": 4,
       "profileImg": "",
-      "id": 2
-    },
-    {
-      "title": "artsarstarstarstarstrastarstasrtastars",
-      "img": "/9de0ba41-1d5a-40c5-805b-a1614e21ebd1.png",
-      "description": "arstarstarts",
-      "user": "Marco",
-      "date": "2022.4.28 7:41",
-      "comments": [],
-      "userID": 1,
-      "profileImg": "",
-      "id": 3
+      "id": 1
     }
   ]
 }
