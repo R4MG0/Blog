@@ -40,15 +40,42 @@
   ],
   "posts": [
     {
-      "title": "f",
-      "img": "/51c09a65-39eb-409d-85f4-4712d7df9979.jpeg",
-      "description": "rgn",
+      "title": "Hello",
+      "img": "/aa178354-51e2-4bd2-ba0e-9151a989a9f5.png",
+      "description": "hello\n",
       "user": "Marco",
-      "date": "2022.4.27 16:19",
-      "comments": [],
+      "date": "2022.4.28 7:34",
+      "comments": [
+        {
+          "comment": "a",
+          "user": "Marco"
+        }
+      ],
       "userID": 1,
       "profileImg": "",
       "id": 1
+    },
+    {
+      "title": " arstarstarstarstartrastarstarstarstars",
+      "img": "/514c2204-9440-498e-99c8-85404250ca86.png",
+      "description": "hello",
+      "user": "Marco",
+      "date": "2022.4.28 7:40",
+      "comments": [],
+      "userID": 1,
+      "profileImg": "",
+      "id": 2
+    },
+    {
+      "title": "artsarstarstarstarstrastarstasrtastars",
+      "img": "/9de0ba41-1d5a-40c5-805b-a1614e21ebd1.png",
+      "description": "arstarstarts",
+      "user": "Marco",
+      "date": "2022.4.28 7:41",
+      "comments": [],
+      "userID": 1,
+      "profileImg": "",
+      "id": 3
     }
   ]
 }

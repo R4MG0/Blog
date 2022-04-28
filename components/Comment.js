@@ -20,9 +20,14 @@ function validateModel(comment) {
 
     let isValid = true
 
-    if(comment.comment === "") {
-        errors.title = "You can't send a blank comment'"
+    if(comment.comment.trim() === "") {
+        errors.comment = "You can't send a blank comment'"
         isValid = false;
+    }
+
+    if(comment.comment.trim().length > 50){
+        errors.comment = "Please enter a shorter comment"
+        isValid = false
     }
 
     return { errors, isValid }
@@ -57,6 +62,7 @@ export default function Comment({ session, post }) {
         setErrors(defaultModel)
 
         comment.user = session.user.firstName
+
         const result = validateModel(comment)
 
         if(!result.isValid) {

@@ -32,25 +32,30 @@ function validateModel(post) {
     }
     let isValid = true
 
-    if(post.title === "") {
+    if(post.title.trim() === "") {
         errors.title = "Please enter a title"
         isValid = false;
     }
+    if (post.title.trim().length > 40) {
+        errors.title = "Please enter a shorter title"
+        isValid = false;
+    };
     
-    if(post.description === "") {
+    if(post.description.trim() === "") {
         errors.description = "please enter a description"
         isValid = false;
     }
+    if(post.description.trim().length > 200){
+        errors.description = "please enter a shorter description"
+        isValid = false;
+    }
+
 
     if(post.img === null || post.img.length === 0) {
         errors.img = "Please put an img"
         isValid = false;
     }
 
-    if(post.userID === 0 || post.userID === null){
-        errors.userID = "pls log in"
-        isValid = false
-    }
 
     return { errors, isValid }
 }
