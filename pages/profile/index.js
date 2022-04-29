@@ -27,10 +27,12 @@ export default function ProfilePage({session}) {
                 <h1>ProfilePage</h1>
                 <div>
                     <div className={styles.profile}>
-                        <div className={styles.img}>
-                            <Link href="/profile/settings" passHref> 
-                                {user.img ? <img src={user.img} /> : <img alt="hello" src={profile}/>}
-                            </Link>
+                        <div className={styles.containerImg}>
+                            <div className={styles.img}>
+                                <Link href="/profile/settings" passHref> 
+                                    {user.img ? <img src={user.img} /> : <img alt="hello" src={profile}/>}
+                                </Link>
+                            </div>
                         </div>
                     <h2 style={{marginLeft:'100px'}}>{user.firstName} {user.lastName}</h2>
                     </div>

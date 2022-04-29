@@ -45,6 +45,8 @@ button, .button {
     text-align: center;
 }
 
+
+
 @media (min-width: 1200px) {
     .page {
         display: flex;
@@ -53,4 +55,5 @@ button, .button {
         width: 960px;
         margin: 0 auto;
     }
+
 }

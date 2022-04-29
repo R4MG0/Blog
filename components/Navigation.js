@@ -4,7 +4,7 @@ import Link from "next/link"
 export default function Navigation({ session }) {
 
     return (
-        <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+        <Navbar collapseOnSelect expand="lg" bg="light" variant="light" style={{ zIndex: 1000}}>
             <Container>
                 {session.user && <Link  href={"/"} passHref><Navbar.Brand style={{textDecoration:"none"}}>Posts</Navbar.Brand></Link>}
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
