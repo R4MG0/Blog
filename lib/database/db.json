@@ -11,40 +11,22 @@
   ],
   "users": [
     {
-      "email": "test@test.ch",
-      "password": "$2a$10$Cm5pnEh.5p2c3r1eh75QAel.Zx9PkrKmlLUhg9AaLN51T6fSLCUom",
-      "firstName": "Test",
-      "lastName": "Test",
-      "role": "user",
-      "img": "",
-      "id": 3
-    },
-    {
       "email": "Marco.Herren@iff.ch",
       "password": "$2a$10$4A8zKM71qtRN0Q8HrVjDzePQvKUqO1hqfWIBbd48eexvXmd2Zh0VS",
       "firstName": "Marco",
       "lastName": "Herren",
       "role": "admin",
-      "img": "",
+      "img": "/120ecd04-63ed-42b8-8ee7-a4a5908a87f7.jpeg",
       "id": 4
     },
     {
       "email": "Ivan@ivan.ch",
-      "password": "$2a$10$qy8maQeYIv7XArCrSPjVt.Go0zsvOR1uu8/AmFg34dp9PyQLkXWg6",
+      "password": "$2a$10$PyJ7SrQAgl21ZWzgVkbhkeXmwT9cl7S9.DftpL508vmx7zATnKKf6",
       "firstName": "Ivan",
       "lastName": "Cammarota",
       "role": "admin",
       "img": "",
       "id": 5
-    },
-    {
-      "email": "Simi@simi.ch",
-      "password": "$2a$10$B.q19YaRlDmwZveUVD5XrOwL11j9/5BxedZL10.m6vL8yi7XdH0Ni",
-      "firstName": "Simeon Tom",
-      "lastName": "Trumpf",
-      "role": "user",
-      "img": "",
-      "id": 6
     }
   ],
   "posts": [
@@ -57,7 +39,7 @@
       "time": "14:57",
       "comments": [],
       "userID": 4,
-      "profileImg": "",
+      "profileImg": "/120ecd04-63ed-42b8-8ee7-a4a5908a87f7.jpeg",
       "id": 1
     }
   ]

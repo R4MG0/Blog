@@ -7,21 +7,30 @@ import { deleteUser } from "@lib/api";
 import { useRouter } from "next/router"
 
 
-const profile = "https://banner2.cleanpng.com/20180525/fbc/kisspng-computer-icons-user-symbol-company-profile-5b084df3719b03.2755377715272708994653.jpg"
+const profile = "https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
 
 export default function FilterableList({session, users}) {
 
     const [newFilteredUser, setNewFilteredUser] = useState([])
+    const [beforeSearch, setBeforeSearch] = useState()
     const router = useRouter()
 
     useEffect(() =>{
+        setBeforeSearch(users)
         setNewFilteredUser(users)
     },[])
 
     const handleChange = (e) => {
         const inputValue = e.target.value
-        let someValue = users.filter(user => user.firstName.includes(inputValue))
+        
+        let someValue = []
 
+        someValue = beforeSearch.map(user => {
+            
+            if(user.firstName.toLowerCase().includes(inputValue.toLowerCase())) return user      
+            if(user.lastName.toLowerCase().includes(inputValue.toLowerCase())) return user
+            
+        })
         setNewFilteredUser(someValue)
     }
 
@@ -52,24 +61,32 @@ export default function FilterableList({session, users}) {
                 session.user && 
                 newFilteredUser.map((user) => {
                         return(
-                            <div className={styles.user} key={user.id}>
+                            
+                            <div className={styles.user} key={user?.id}>
+                                { 
+                                user?.id &&    
                                 
-                                <Link href={`/users/${user.id}`} passHref>
                                     <Card style={{ width: '30rem', marginTop: '2rem' }} className={styles.card}>      
-                                        <Card.Body>
-                                            <div className={styles.profile}>
-                                                <div className={styles.img}>
-                                                {user.img ? <img src={user?.img}/> : <img src={profile}/>}
-                                                </div>
-                                                <div>
-                                                <Card.Title className={styles.name}>{`${user.firstName} ${user.lastName}`} <br/> <Card.Subtitle style={{marginTop:'0.5rem'}}>{user.role}</Card.Subtitle></Card.Title>
-                                                { session.user.role === 'admin' && <Button className={styles.button} variant="danger" onClick={(e) => kill(user.id)}>Delete</Button>}
-                                                </div>
-                                            </div>  
-                                        </Card.Body>
+                                        <Link href={`/users/${user.id}`} passHref>
+                                            <Card.Body>
+                                                <div className={styles.profile}>
+                                                    <div className={styles.img}>
+                                                    {user.img ? <img src={user?.img}/> : <img src={profile}/>}
+                                                    </div>
+                                                    <div>
+                                                    <Card.Title className={styles.name}>{`${user.firstName} ${user.lastName}`} <br/> <Card.Subtitle style={{marginTop:'0.5rem'}}>{user.role}</Card.Subtitle></Card.Title>
+                                                    
+                                                    </div>
+                                                </div>  
+                                            </Card.Body>
+                                        </Link>
+                                        <div className={styles.buttonContainer}>
+                                        { session.user.role === 'admin' && <Button className={styles.button} style={{width:'8vw' , marginLeft:'8px', marginBottom:'1.5rem'}} variant="danger" onClick={(e) => kill(user.id)}>Delete</Button>}
+                                        </div>
                                     </Card>
-                                </Link>
-                            </div>
+                         }
+                         </div>
+                        
                         )
                     })
             }

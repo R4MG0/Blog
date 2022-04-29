@@ -16,7 +16,7 @@ export default function Navigation({ session }) {
                     </Nav>
                     <Navbar.Collapse className="justify-content-end">
                         <Nav>  
-                            { session.user?.role === "admin" && <Link href="/register" passHref><Nav.Link style={{textDecoration:"none"}}>Register</Nav.Link></Link>}
+                            {session.user?.role === "admin" && <Link href="/register" passHref><Nav.Link style={{textDecoration:"none"}}>Register</Nav.Link></Link>}
                             {session.user && <Link href="/login" passHref><Nav.Link style={{textDecoration:"none"}} onClick={session.logout}>logout</Nav.Link></Link>}                            
                         </Nav>
                     </Navbar.Collapse>

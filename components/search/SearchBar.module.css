@@ -1,3 +1,10 @@
+.buttonContainer{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
 .user{
     display: flex;
     flex-direction: column;
@@ -10,19 +17,21 @@
 }
 
 .img{
-    display: inline-flex; 
+    display: inline-block; 
     position: relative; 
     width: 150px; 
     height: 150px; 
     overflow: hidden; 
-    border-radius: 50%; 
+    border-radius: 10%; 
     align-items: center;
 } 
     
 .img img { 
-    width: auto; height: 100%; margin-left: -60px;
+    width: auto; 
+    height: 100%; 
+    margin-left: 0px;
 }
-
+   
 .profile {
     display: flex;
     flex-wrap: wrap;

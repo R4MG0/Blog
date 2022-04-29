@@ -91,7 +91,6 @@ export default function Post({session, postToEdit}) {
 
     useEffect(() => {
         if(!base64Image) return
-
         const uploadImage = async () => {
             const response = await fetch("/api/upload", {
                 method: "POST",
@@ -102,11 +101,9 @@ export default function Post({session, postToEdit}) {
                     base64Image
                 })
             })
-    
             const data = await response.json()
             setImagePath(data.filePath)
         }
-        
         uploadImage()
     }, [base64Image])
 
@@ -144,7 +141,6 @@ export default function Post({session, postToEdit}) {
             }else{
                 post.img = imagePath
             }
-
             const result = validateModel(post)
 
 

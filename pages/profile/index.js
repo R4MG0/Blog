@@ -9,7 +9,7 @@ import MyPosts from "@components/MyPosts"
 import styles from "./index.module.css"
 
 
-const profile = "https://banner2.cleanpng.com/20180525/fbc/kisspng-computer-icons-user-symbol-company-profile-5b084df3719b03.2755377715272708994653.jpg"
+const profile = "https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
 export default function ProfilePage({session}) {
     useRedirectToLogin(session)
 
