@@ -39,6 +39,16 @@
     /* margin-left: 1.5rem; */
 }
 
+
+
+@media (max-width: 2650px) {
+    .hello{
+        width: 55vw;
+        height: 80vh;
+        /* margin-right: 1rem; */
+    }
+}
+
 @media (min-width: 1920px) {
     .hello{
         width: 52vw;
@@ -55,13 +65,7 @@
     }
 }
 
-@media (max-width: 2650px) {
-    .hello{
-        width: 55vw;
-        height: 65vh;
-        /* margin-right: 1rem; */
-    }
-}
+
 
 @media (max-width: 1500px){
     .hello{
@@ -162,5 +166,12 @@
     .hello{
         width:95vw;
         height:57vh;
+    }
+}
+
+@media (min-height: 640px) {
+    .hello {
+        width: 60vw;
+        height: 80vh;
     }
 }
