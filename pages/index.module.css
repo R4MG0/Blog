@@ -55,6 +55,14 @@
     }
 }
 
+@media (max-width: 2650px) {
+    .hello{
+        width: 55vw;
+        height: 65vh;
+        /* margin-right: 1rem; */
+    }
+}
+
 @media (max-width: 1500px){
     .hello{
         width: 70vw;
