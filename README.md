@@ -1,5 +1,5 @@
 ### How to install the Website: 
-> 1. Clone the site.
+> 1. Clone the site ' git clone https://github.com/R4MG0/Blog.git '.
 > 2. Open the cloned Folder in an IDE
 > 3. As next, open the terminal and run the command 'npm i uuid base64-to-image'
 > 4. When the instalation completed, run the command 'npm run dev'
