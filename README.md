@@ -3,7 +3,7 @@
 > 2. Open the cloned Folder in an IDE
 > 3. As next, open the terminal and run the command 'npm i uuid base64-to-image'
 > 4. When the instalation completed, run the command 'npm run dev'
-> 5. When the server has started, open the Site localhost:3000*
+> 5. When the server has started, open the Site localhost:3000
 > 6. In the Login page, enter the informations below:
 > - Mail: guest@guest.ch
 > - Password: Guest
