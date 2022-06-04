@@ -8,3 +8,10 @@
 > - Mail: guest@guest.ch
 > - Password: Guest
 > 7. When you have logined, can you have fun with the Site
+
+
+
+
+### After Install
+
+> 1. If you want, you can be root but you should contact me for the Login.
