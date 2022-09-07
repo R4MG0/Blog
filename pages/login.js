@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import styles from "./login.module.css"
 import { Form, Button } from "react-bootstrap"
 import { useRedirectToHome } from "@lib/session"

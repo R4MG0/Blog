@@ -97,7 +97,7 @@ export default function Comment({ session, post }) {
                 {
                     post.comments.map((comment) => {
                         return (
-                            <div>
+                            <div key={comment.id}>
                                 {
                                     comment.user === session.user?.firstName ?
                                         <Accordion.Body align="right" style={{ wordBreak: 'break-word'}}>

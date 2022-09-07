@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { Card, Button } from "react-bootstrap"
 import styles from "./MyPosts.module.css"
 import { useState, useEffect } from "react"

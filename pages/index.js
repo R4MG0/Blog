@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import styles from "./index.module.css"
 import Link from "next/link"
 import Image from "next/image"
@@ -37,7 +38,7 @@ export default function IndexPage({ session }) {
             {session.user &&
                 posts.map(post => {
                     return (
-                        <Link href={`/posts/${post.id}`}>
+                        <Link href={`/posts/${post.id}`} key={post.id} passHref>
                         <div key={post.id}>
                             <Card className={styles.hello}>
                                 <ListGroup className="list-group-flush">
