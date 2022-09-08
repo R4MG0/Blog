@@ -1,6 +1,7 @@
 ### Requirements for this Website:
-> npm or yarn
-> Node Server
+> - [Git](https://git-scm.com/downloads)
+> - [Node](https://nodejs.org/en/download/)
+
 
 ### How to install the Website: 
 > 1. Clone the site ' git clone https://github.com/R4MG0/Blog.git '.
