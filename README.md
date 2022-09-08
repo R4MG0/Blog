@@ -1,3 +1,7 @@
+### Requirements for this Website:
+> npm or yarn
+> Node Server
+
 ### How to install the Website: 
 > 1. Clone the site ' git clone https://github.com/R4MG0/Blog.git '.
 > 2. Open the cloned Folder in an IDE
@@ -8,10 +12,3 @@
 > - Mail: guest@guest.ch
 > - Password: Guest
 > 7. When you have logined, can you have fun with the Site
-
-
-
-
-### After Install
-
-> 1. If you want, you can be root but you should contact me for the Login.
