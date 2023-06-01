@@ -27,12 +27,21 @@
       "role": "admin",
       "img": "/874fa619-bf3f-46e9-83ab-22021ed5ea81.png",
       "id": 6
+    },
+    {
+      "email": "loic@loic.ch",
+      "password": "$2a$10$SQxSVnYlnxqQfrO9Z/SiE.oS60FbA8SeCQwMWGGxxAllaamm6GE2y",
+      "firstName": "Loic",
+      "lastName": "Imhof",
+      "role": "user",
+      "img": "/94448504-2d80-4b10-94b8-9612d6f0f0f9.png",
+      "id": 7
     }
   ],
   "posts": [
     {
       "title": "Hello",
-      "img": "/8dc48714-2c2e-4cd1-8d8d-31e48621ca18.gif",
+      "img": "/87cd9e4a-3eeb-4802-9d58-f545e778ff06.png",
       "description": "Hello there thx for looking here.",
       "user": "Root",
       "date": "2022.6.4",
