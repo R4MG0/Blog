@@ -25,7 +25,7 @@
       "firstName": "Root",
       "lastName": "Root",
       "role": "admin",
-      "img": "/874fa619-bf3f-46e9-83ab-22021ed5ea81.png",
+      "img": "",
       "id": 6
     },
     {
@@ -34,21 +34,21 @@
       "firstName": "Loic",
       "lastName": "Imhof",
       "role": "user",
-      "img": "/94448504-2d80-4b10-94b8-9612d6f0f0f9.png",
+      "img": "",
       "id": 7
     }
   ],
   "posts": [
     {
-      "title": "Hello",
-      "img": "/87cd9e4a-3eeb-4802-9d58-f545e778ff06.png",
-      "description": "Hello there thx for looking here.",
+      "title": "arsotnei",
+      "img": "/3ca3620a-bd9e-4bff-ac61-c6fe5feb3eec.jpeg",
+      "description": "arstyno",
       "user": "Root",
-      "date": "2022.6.4",
-      "time": "19:43",
+      "date": "2023.6.15",
+      "time": "11:14",
       "comments": [],
       "userID": 6,
-      "profileImg": "/874fa619-bf3f-46e9-83ab-22021ed5ea81.png",
+      "profileImg": "",
       "id": 1
     }
   ]
